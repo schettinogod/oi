@@ -1,0 +1,26 @@
+# Define a string que será invertida
+string = "Hello, world!"
+
+# Converte a string em uma lista de caracteres
+lista_caracteres = list(string)
+
+# Define o início e o fim da lista
+inicio = 0
+fim = len(lista_caracteres) - 1
+
+# Enquanto o início for menor que o fim
+while inicio < fim:
+    # Troca o caractere do início pelo do fim
+    lista_caracteres[inicio], lista_caracteres[fim] = lista_caracteres[fim], lista_caracteres[inicio]
+    
+    # Move o início para frente
+    inicio += 1
+    
+    # Move o fim para trás
+    fim -= 1
+    
+# Converte a lista de caracteres de volta para uma string
+string_invertida = "".join(lista_caracteres)
+
+# Imprime a string invertida
+print(string_invertida)
